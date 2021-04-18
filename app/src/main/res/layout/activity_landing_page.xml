@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LandingPageActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="10dp"
+        android:layout_marginBottom="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearCheckBooking"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="@drawable/ic_baseline_bookmark_24"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check Booking" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearChangePassword"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="@drawable/ic_baseline_vpn_key_24"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Password" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:background="#89090B"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
