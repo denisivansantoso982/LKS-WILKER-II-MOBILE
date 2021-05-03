@@ -36,6 +36,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Button button;
     private RequestQueue queue;
     private RelativeLayout loadingPanel;
+    private Session s;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         button = findViewById(R.id.btn);
         queue = Volley.newRequestQueue(context);
         loadingPanel = findViewById(R.id.loadingPanel);
+        s = new Session(context);
+
+        if (s.checkSession()) {
+            Intent intent = new Intent(LoginActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
     @Override
@@ -71,8 +79,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             try {
                                 JSONObject object = new JSONObject(response);
                                 Log.d("object JSON", "object JSON: " + object);
-
-                                Session s = new Session(context);
 
                                 s.setTamu(object.getInt("id"), object.getString("nik"), object.getString("nama"), object.getString("email"), object.getString("nohp"), object.getString("alamat"));
 

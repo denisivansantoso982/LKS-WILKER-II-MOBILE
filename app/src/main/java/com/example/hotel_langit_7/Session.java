@@ -41,4 +41,17 @@ public class Session {
     public String getAlamat(){
         return preferences.getString("alamat", "");
     }
+
+    public boolean checkSession() {
+        return preferences.contains("id");
+    }
+
+    public void clearSession() {
+        preferences.edit().remove("id").apply();
+        preferences.edit().remove("nik").apply();
+        preferences.edit().remove("nama").apply();
+        preferences.edit().remove("email").apply();
+        preferences.edit().remove("nohp").apply();
+        preferences.edit().remove("alamat").apply();
+    }
 }

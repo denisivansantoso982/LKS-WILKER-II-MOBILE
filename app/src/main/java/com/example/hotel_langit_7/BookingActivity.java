@@ -11,6 +11,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -37,17 +39,19 @@ public class BookingActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<Booking> data;
     BookingAdapter adapter;
+    TextView hintText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
 
-        getSupportActionBar().setTitle("Check Booking");
+        getSupportActionBar().setTitle("Cek Booking");
 
         context = BookingActivity.this;
         queue = Volley.newRequestQueue(context);
         recyclerView = findViewById(R.id.recycler_booking);
+        hintText = findViewById(R.id.text_hint);
         data = new ArrayList<>();
         data.clear();
         Session s = new Session(context);
@@ -64,7 +68,13 @@ public class BookingActivity extends AppCompatActivity {
                         data.add(new Booking(object.getInt("id"), object.getInt("total"), object.getInt("nomor"), object.getString("tgl_booking"), object.getString("tgl_check_in"), object.getString("tgl_check_out"), object.getString("jenis")));
                     }
 
-                    Log.d("DATA", "data: " + data.toString());
+                    if (arr.length() <= 0) {
+                        recyclerView.setVisibility(View.GONE);
+                        hintText.setVisibility(View.VISIBLE);
+                    } else {
+                        recyclerView.setVisibility(View.VISIBLE);
+                        hintText.setVisibility(View.GONE);
+                    }
 
                     adapter = new BookingAdapter(context, data);
                     RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(context);
