@@ -2,6 +2,7 @@ package com.example.hotel_langit_7;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,7 +17,7 @@ import android.widget.TextView;
 import android.widget.Toolbar;
 
 public class LandingPageActivity extends AppCompatActivity {
-    LinearLayout changePassword, checkBooking;
+    CardView changePassword, checkBooking;
     TextView hi;
     Session session;
 

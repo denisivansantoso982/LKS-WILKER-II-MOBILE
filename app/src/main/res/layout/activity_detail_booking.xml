@@ -25,10 +25,11 @@
                 <TextView
                     android:fontFamily="sans-serif"
                     android:textStyle="bold"
-                    android:textSize="14dp"
+                    android:textSize="16dp"
                     android:text="Jenis Kamar : "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"/>
 
                 <TextView
                     android:layout_marginLeft="20dp"
@@ -38,8 +39,9 @@
                     android:text="VIP"
                     android:textColor="@color/red"
                     android:id="@+id/jenis_kamar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"/>
                 
             </LinearLayout>
 
@@ -52,10 +54,11 @@
                 <TextView
                     android:fontFamily="sans-serif"
                     android:textStyle="bold"
-                    android:textSize="14dp"
+                    android:textSize="16dp"
                     android:text="Nomor Kamar : "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"/>
 
                 <TextView
                     android:layout_marginLeft="20dp"
@@ -65,8 +68,9 @@
                     android:text="200"
                     android:textColor="@color/red"
                     android:id="@+id/nomor_kamar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"/>
 
             </LinearLayout>
 
@@ -79,10 +83,11 @@
                 <TextView
                     android:fontFamily="sans-serif"
                     android:textStyle="bold"
-                    android:textSize="14dp"
+                    android:textSize="16dp"
                     android:text="Tanggal Booking : "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"/>
 
                 <TextView
                     android:layout_marginLeft="20dp"
@@ -92,8 +97,9 @@
                     android:text="1 1 2021"
                     android:textColor="@color/red"
                     android:id="@+id/detail_tgl_booking"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"/>
 
             </LinearLayout>
 
@@ -106,10 +112,11 @@
                 <TextView
                     android:fontFamily="sans-serif"
                     android:textStyle="bold"
-                    android:textSize="14dp"
+                    android:textSize="16dp"
                     android:text="Tanggal Check In : "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"/>
 
                 <TextView
                     android:layout_marginLeft="20dp"
@@ -119,8 +126,9 @@
                     android:text="1 1 2021"
                     android:textColor="@color/red"
                     android:id="@+id/detail_tanggal_check_in"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"/>
 
             </LinearLayout>
 
@@ -133,10 +141,11 @@
                 <TextView
                     android:fontFamily="sans-serif"
                     android:textStyle="bold"
-                    android:textSize="14dp"
+                    android:textSize="16dp"
                     android:text="Tanggal Check Out : "
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"/>
 
                 <TextView
                     android:layout_marginLeft="20dp"
@@ -146,8 +155,9 @@
                     android:text="4 1 2021"
                     android:textColor="@color/red"
                     android:id="@+id/detail_tgl_check_out"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"/>
 
             </LinearLayout>
             

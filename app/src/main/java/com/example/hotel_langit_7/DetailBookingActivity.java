@@ -5,11 +5,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.time.LocalTime;
+import java.util.Locale;
+
 public class DetailBookingActivity extends AppCompatActivity {
     private TextView jenis, nomor, booking, checkIn, checkOut;
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss aa");
+    Date date1 = null, date2 = null, date3 = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +30,14 @@ public class DetailBookingActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
+        try {
+            date1 = dateFormat.parse(getIntent().getStringExtra("tglBooking"));
+            date2 = dateFormat.parse(getIntent().getStringExtra("tglCheckIn"));
+            date3 = dateFormat.parse(getIntent().getStringExtra("tglCheckOut"));
+        } catch (ParseException e) {
+            Log.d("Error", "onCreate: " + e.getMessage());
+        }
+
         jenis = findViewById(R.id.jenis_kamar);
         nomor = findViewById(R.id.nomor_kamar);
         booking = findViewById(R.id.detail_tgl_booking);
@@ -29,9 +46,9 @@ public class DetailBookingActivity extends AppCompatActivity {
 
         jenis.setText(getIntent().getStringExtra("jenis"));
         nomor.setText(String.valueOf(getIntent().getIntExtra("nomor", 0)));
-        booking.setText(getIntent().getStringExtra("tglBooking"));
-        checkIn.setText(getIntent().getStringExtra("tglCheckIn"));
-        checkOut.setText(getIntent().getStringExtra("tglCheckOut"));
+        booking.setText(new SimpleDateFormat("E, dd MMM yyyy").format(date1));
+        checkIn.setText(new SimpleDateFormat("E, dd MMM yyyy").format(date2));
+        checkOut.setText(new SimpleDateFormat("E, dd MMM yyyy").format(date3));
     }
 
     @Override
